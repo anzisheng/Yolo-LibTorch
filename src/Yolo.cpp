@@ -1,4 +1,5 @@
 #include "Yolo.h"
+#include <iostream>
 
 Yolo::Yolo(std::string ptFile, std::string version, std::string device, bool isHalf, int height, int width, float confThres, float iouThres)
 {
