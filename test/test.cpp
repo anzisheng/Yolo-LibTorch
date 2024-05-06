@@ -250,8 +250,9 @@ int main(int argc,  char const* argv[])
 		// show and exit
 		if (!para[IS_CLOSE].getB())
 		{
-			if (cv::waitKey(1) == 27 || cv::getWindowProperty(WINDOW_NAME, cv::WND_PROP_VISIBLE) < 1.0) break;
+			//if (cv::waitKey(1) == 27 || cv::getWindowProperty(WINDOW_NAME, cv::WND_PROP_VISIBLE) < 1.0) break;
 			cv::imshow(WINDOW_NAME, frame);
+			cv::waitKey(1);
 		}
 	}
 

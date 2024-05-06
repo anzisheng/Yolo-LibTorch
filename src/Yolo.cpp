@@ -2,7 +2,9 @@
 
 Yolo::Yolo(std::string ptFile, std::string version, std::string device, bool isHalf, int height, int width, float confThres, float iouThres)
 {
-	model = torch::jit::load(ptFile);
+	//model = torch::jit::load(ptFile);/home/an/project/hand_det/Yolo-LibTorch/test/resource/yolov8n.cpu.torchscript
+	model = torch::jit::load("/home/an/project/hand_det/Yolo-LibTorch/test/resource/yolov8n.cpu.torchscript"); //good
+
 	if (isHalf)
 	{
 		model.to(torch::kHalf);

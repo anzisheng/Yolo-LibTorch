@@ -1,9 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
 
+set(CMAKE_BUILD_TYPE debug)
+
 set(CMAKE_CXX_STANDARD 17)
 # Windows 系统下指定 pytorch 路径和 opencv 路径
 # set(Torch_DIR /path/to/libtorch/share/cmake/Torch)
 # set(OpenCV_DIR /path/to/opencv/build)
+
+set(TORCH_PATH /home/an/project/libtorch/share/cmake/Torch)
+if( TORCH_PATH )
+    message("TORCH_PATH set to: ${TORCH_PATH}")
+    set(Torch_DIR ${TORCH_PATH})
+else()
+    message(FATAL_ERROR "Need to specify Torch path, e.g., pytorch/torch/share/cmake/Torch ")
+endif()
+
 
 project(YoloLibTorch)
 
