@@ -3,3 +3,4 @@ lib
 bin
 .vscode
 yolov8n.pt
+test/resource
